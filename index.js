@@ -3,10 +3,12 @@ const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 600,
-    height: 800,
+    width: 300,
+    height: 350,
+    resizable: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
   });
 
@@ -16,7 +18,5 @@ function createWindow() {
 app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  if (process.platform !== 'darwin') app.quit();
 });
