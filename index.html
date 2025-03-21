@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pip-chan MVP</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="container">
-      <p>
-        (•_•) <br />
-        Pip-chan here
-      </p>
-      <button onclick="playRandom()">Speak</button>
-    </div>
-
-    <audio id="audioPlayer"></audio>
-
-    <script src="renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Pip-chan</title>
+  <style>
+    body {
+      margin: 0;
+      background: transparent; /* Transparent background */
+      overflow: hidden;
+    }
+    .avatar {
+      position: absolute;
+      width: 300px;
+      height: auto;
+      bottom: 0px;
+      right: 0px;
+      -webkit-app-region: drag; /* Allows dragging */
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/images/pipchan1.webp" alt="Pip-chan" class="avatar" />
+</body>
 </html>
